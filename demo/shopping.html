@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script src="layui/layui.js"></script>
+		<style type="text/css">
+			*,
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.contentArea {
+				width: 50%;
+				margin-top: 40px;
+			}
+			.nav_toast{
+				margin-left: 55px;
+			}
+			form{
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="test">
+			<li class="layui-nav-item layui-nav-itemed">
+				<a href="javascript:;">默认展开</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="item1.html">选项1</a>
+					</dd>
+					<dd>
+						<a href="item2.html">选项2</a>
+					</dd>
+					<dd>
+						<a href="item3.html">選項3</a>
+					</dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item layui-nav-itemed">
+				<a href="javascript:;">解决方案</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="mobile.html">移动模块</a>
+					</dd>
+					<dd>
+						<a href="back.html">后台模版</a>
+					</dd>
+					<dd class="layui-this">
+						<a href="shopping.html">电商平台</a>
+					</dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item layui-nav-itemed">
+				<a href="">产品</a>
+			</li>
+			<li class="layui-nav-item layui-nav-itemed">
+				<a href="">大数据</a>
+			</li>
+		</ul>
+
+		<div class="layui-body  layui-tab-content right-content">
+			<div class="contentArea">
+				<div class="nav_toast">
+					<span class="layui-breadcrumb" lay-space="-">
+						<a href="">解决方案</a>
+						<a href="">電商模塊</a>
+					</span>
+				</div>
+				<form class="layui-form">
+					<div class="layui-form-item">
+						<label class="layui-form-label">用戶名</label>
+						<div class="layui-input-block">
+							<input class="layui-input" />
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">密碼</label>
+						<div class="layui-input-block">
+							<input class="layui-input" type="password" required="" lay-verify="required" />
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+		<script>
+			//注意：导航 依赖 element 模块，否则无法进行功能性操作
+			layui.use('element', function() {
+				var element = layui.element();
+				element.on('nav(demo)', function(elem) {
+					console.log(elem)
+					//layer.msg(elem.text());
+				});
+			});
+
+			layui.use('form', function() {
+				var form = layui.form();
+
+				//监听提交
+				form.on('submit(formDemo)', function(data) {
+					layer.msg(JSON.stringify(data.field));
+					return false;
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
