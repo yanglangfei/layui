@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="layui/css/layui.css" />
-		<script src="layui/layui.js"></script>
-		<style type="text/css">
-			*,
-			html,
-			body {
-				padding: 0;
-				margin: 0;
-			}
-			
-			.contentArea {
-				width: 50%;
-				margin-top: 40px;
-			}
-			.nav_toast{
-				margin-left: 55px;
-			}
-			form{
-				margin-top: 10px;
-			}
-		</style>
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+		<script src="../layui/layui.js"></script>
+		<link rel="stylesheet" href="../css/base.css" />
 	</head>
 
 	<body>
+        <div id="mainTabBar">
+			<div class="layui-nav  lay-item">
+				<li class="layui-nav-item">
+					<a href="javascript:;">首页</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">商城</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">我的</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="javascript:;">个人中心</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">设置</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">退出账号</a>
+						</dd>
+					</dl>
+				</li>
+			</div>
+		</div>
 
+		<div class="layui-footer  footer">
+			<div class="layui-main">
+				<p>© 2017
+					<a href="/">layui.com</a> MIT license</p>
+				<p>
+					<a href="http://fly.layui.com/case/2017/" target="_blank">案例</a>
+					<a href="http://fly.layui.com/jie/3147.html" target="_blank">捐赠</a>
+					<!--<a href="javascript:layer.msg('暂无此页');">关于我们</a>-->
+					<a href="mailto:xianxin@layui.com">联系</a>
+					<a href="http://fly.layui.com/jie/4281.html" target="_blank">Git仓库</a>
+					<a href="http://fly.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+				</p>
+			</div>
+		</div>
 		<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="test">
 			<li class="layui-nav-item layui-nav-itemed">
-				<a href="javascript:;">默认展开</a>
+				<a href="javascript:;">商家管理</a>
 				<dl class="layui-nav-child">
-					<dd >
-						<a href="item1.html">选项1</a>
+					<dd>
+						<a href="index.html">新增</a>
 					</dd>
 					<dd class="layui-this">
-						<a href="item2.html">选项2</a>
+						<a href="edit_merchant.html">编辑/删除</a>
 					</dd>
-					<dd>
-						<a href="item3.html">選項3</a>
+					<dd >
+						<a href="check_merchant.html">审核</a>
 					</dd>
 				</dl>
 			</li>
 			<li class="layui-nav-item layui-nav-itemed">
-				<a href="javascript:;">解决方案</a>
+				<a href="javascript:;">用户管理</a>
 				<dl class="layui-nav-child">
 					<dd>
-						<a href="mobile.html">移动模块</a>
+						<a href="../user/add_user.html">新增</a>
 					</dd>
 					<dd>
-						<a href="back.html">后台模版</a>
-					</dd>
-					<dd>
-						<a href="shopping.html">电商平台</a>
+						<a href="../user/edit_user.html">编辑/删除</a>
 					</dd>
 				</dl>
 			</li>
 			<li class="layui-nav-item layui-nav-itemed">
-				<a href="">产品</a>
-			</li>
-			<li class="layui-nav-item layui-nav-itemed">
-				<a href="">大数据</a>
+				<a href="">权限管理</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="../autho/add_autho.html">新增</a>
+					</dd>
+					<dd>
+						<a href="../autho/edit_autho.html">编辑/删除</a>
+					</dd>
+				</dl>
 			</li>
 		</ul>
 
@@ -70,8 +91,8 @@
 			<div class="contentArea">
 				<div class="nav_toast">
 					<span class="layui-breadcrumb" lay-space="-">
-						<a href="">首頁</a>
-						<a href="">item2</a>
+						<a href="">商家管理</a>
+						<a href="">编辑/删除</a>
 					</span>
 				</div>
 				<form class="layui-form">
