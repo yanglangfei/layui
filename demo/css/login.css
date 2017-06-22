@@ -1,0 +1,14 @@
+*{
+				margin: 0;
+				padding: 0;
+			}
+			form{
+				width: 400px;
+				height: 300px;
+				text-align: center;
+				margin: auto;
+				margin-top: 15%;
+			}
+			.login_btn{
+				width: 100%;
+			}

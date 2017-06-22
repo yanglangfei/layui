@@ -1,0 +1,69 @@
+*,
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.contentArea {
+				width: 50%;
+				margin-top: 100px;
+			}
+			
+			.nav_toast {
+				margin-left: 55px;
+			}
+			
+			form {
+				margin-top: 10px;
+			}
+			
+			#mainTabBar {
+				width: 100%;
+				height: 60px;
+				background: #23262E;
+				z-index: 10;
+			}
+			
+			.layui-nav-side {
+				z-index: 20;
+				margin-top: 60px;
+			}
+			
+			.footer {
+				height: auto;
+				padding: 15px 0;
+				line-height: 26px;
+				position: fixed;
+				left: 200px;
+				right: 0;
+				bottom: 0;
+				height: 44px;
+				background-color: #eee;
+			}
+			
+			.layui-main {
+				width: auto;
+				margin: 0 15px;
+				position: relative;
+				width: 1140px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			p {
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				margin: 0;
+				padding: 0;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			
+			.footer a {
+				padding: 0 5px;
+				color: #333;
+				text-decoration: none;
+			}
